@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Review</title>
+  </head>
+  <body>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="aTest.html">A Test</a>
+		<a href="bTest.html">B Test</a>
+		<a href="review.html">Review</a>
+	</div>
+	<div class="container">
+		<h4>Numbers of participants that completed the experiment: <span id="total"></span></h4>
+		<h4>Numbers of participants that choosed A Test site: <span id="a"></span></h4>
+		<h4>Numbers of participants that choosed B Test site: <span id="b"></span></h4>
+		<hr>
+		<h2>Before submiting...</h2>
+		<p>Please make sure both websites have been tested, <a href="aTest.html">A Test</a> and <a href="bTest.html">B Test</a>.</p>
+		<h2>Review</h2>
+		<p>Please select the one that you prefer using</p>
+		<div class="A">
+			<p>Test A<br>Orginazed UI</p>
+			<button type="button" onclick="aTest()">Submit A</button>
+		</div>
+		<div class="B">
+			<p>Test B<br>Unorginazed UI</p>
+			<button type="button" onclick="bTest()">Submit B</button>
+		</div>
+	</div>
+  </body>
+</html>
+<style>
+	body{
+		font-size:20px;
+		background-color:#cfdfe7;
+	}
+	.container{
+		margin:3% 5% 0 5%;	
+	}
+	.navbar{
+		display: flex;
+		align-items: center;
+	    height: 60px;
+		background-color: #f4f4ff;
+	}
+	.navbar a{
+		margin-left: 5%;
+	}
+	.A{
+		width: 24%;
+		border: 1px solid white;
+		padding: 20px;
+		text-align: center;
+	}
+	.B{
+		margin-top:5px;
+		width: 24%;
+		border: 1px solid white;
+		padding: 20px;
+		text-align: center;
+	}
+	.container button{
+		font-size: 16px;
+		padding: 5px 10px;
+	}
+</style>
+<script>
+	function aTest() {
+	  if (typeof(Storage) !== "undefined") {
+		if (localStorage.total) {
+		  localStorage.total = Number(localStorage.total)+1;
+		}	
+		if (localStorage.a) {
+		  localStorage.a = Number(localStorage.a)+1;
+		}		
+
+	  } else {
+		document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+	  }
+	  alert("Thank you for the cooperation");
+	  location.replace("index.html");
+	}
+	function bTest() {
+	  if (typeof(Storage) !== "undefined") {
+		if (localStorage.total) {
+		  localStorage.total = Number(localStorage.total)+1;
+		}	
+		if (localStorage.b) {
+		  localStorage.b = Number(localStorage.b)+1;
+		}		
+
+	  } else {
+		document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+	  }
+	  alert("Thank you for the cooperation");
+	  location.replace("index.html");
+	}
+	
+	
+	if (typeof(localStorage.total)=== "undefined") {
+		localStorage.total=0;
+	}
+	if (typeof(localStorage.a)=== "undefined") {
+		localStorage.a=0;
+	}
+	if (typeof(localStorage.b)=== "undefined") {
+		localStorage.b=0;
+	}
+	document.getElementById("total").innerHTML =localStorage.total;
+	document.getElementById("a").innerHTML =localStorage.a;
+	document.getElementById("b").innerHTML =localStorage.b;
+</script>
