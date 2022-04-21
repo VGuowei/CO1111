@@ -1,6 +1,3 @@
-# CO1111
-Worksheet 10
+# CO1111 Assignment 2 – Research Experiment
 
 ## This is the computer challenge module
-
-I have install the Github on my Webstore
