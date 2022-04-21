@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Test</title>
+  </head>
+  <body>
+	<div class="navbar">
+		<a href="index.html">Home</a>
+		<a href="aTest.html">A Test</a>
+		<a href="bTest.html">B Test</a>
+		<a href="review.html">Review</a>
+	</div>
+	<div class="container">
+		<h1>Organized User Interface</h1>
+		<h2 style="margin-top:50px;">Instractions</h2>
+		<p>Please feel free to:</p>
+		<ul>
+			<li>Navigate around the website, especially with <b>A Test</b> and <b>B Test</b>.</li>
+			<li>Change the background color of the websites <b>A Test</b> and <b>B Test</b>.</li>
+		</ul>
+		<hr>
+		<div class="color">
+			<b>Color settings</b>
+			<ul style="margin:0;">
+				<p>Classic</p>
+					<ul style="cursor: pointer;">
+						<li onclick="white()"><i>White</i></li>
+						<li onclick="dark()"><i>Dark</i></li>
+					</ul>
+				<p>Blue</p>
+					<ul style="cursor: pointer;">
+						<li onclick="lightblue()"><i>Lightblue</i></li>
+						<li onclick="deepskyblue()"><i>Deepskyblue</i></li>
+						<li onclick="blueviolet()"><i>Blueviolet</i></li>
+					</ul>
+				<p>Green</p>
+					<ul style="cursor: pointer;">
+						<li onclick="lightgreen()"><i>Lightgreen</i></li>
+						<li onclick="greenyellow()"><i>Greenyellow</i></li>
+						<li onclick="forestgreen()"><i>Forestgreen</i></li>
+					</ul>
+			</ul>
+		</div>
+	</div>
+  </body>
+</html>
+<style>
+	body{
+		font-size:20px;
+	}
+	.container{
+		margin:7% 5% 0 5%;	
+	}
+	.navbar{
+		display: flex;
+		align-items: center;
+	    height: 60px;
+		background-color: #f4f4ff;
+	}
+	.navbar a{
+		margin-left: 5%;
+	}
+	.color{
+		padding: 3px;
+		border:2px solid black;
+		background-color:white;
+		width: 200px;
+	}
+	.color p {
+		margin:0;
+	}
+</style>
+<script>
+	function white(){
+		document.body.style.backgroundColor = "white";
+	}	
+	function dark(){
+		document.body.style.backgroundColor = "#626262";
+	}	
+	function lightblue(){
+		document.body.style.backgroundColor = "lightblue";
+	}	
+	function deepskyblue(){
+		document.body.style.backgroundColor = "deepskyblue";
+	}	
+	function blueviolet(){
+		document.body.style.backgroundColor = "blueviolet";
+	}	
+	function greenyellow(){
+		document.body.style.backgroundColor = "greenyellow";
+	}	
+	function lightgreen(){
+		document.body.style.backgroundColor = "lightgreen";
+	}	
+	function forestgreen(){
+		document.body.style.backgroundColor = "forestgreen";
+	}
+</script>
