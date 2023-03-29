@@ -1,3 +1,4 @@
-# CO1111 Assignment 2 – Research Experiment
+#Research Experiment
+
+The Computing Challenge - Assignment part 2
 ### Welcome page: https://vguowei.github.io/CO1111/
-## This is the computer challenge module
